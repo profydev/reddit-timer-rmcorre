@@ -7,6 +7,7 @@ import '@fontsource/bitter/variable.css';
 import '@fontsource/montserrat/400.css';
 
 import 'normalize.css';
+import './css/global.css';
 
 // eslint-disable-next-line react/jsx-filename-extension
 ReactDOM.render(<App />, document.getElementById('root'));
