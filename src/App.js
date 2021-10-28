@@ -1,7 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-  return <div>App Placeholder</div>;
+  return (
+    <Router>
+      <div>App Placeholder</div>
+      <Switch>
+        <Route path="/search" />
+        <Route path="/" />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
