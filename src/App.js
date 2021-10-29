@@ -6,8 +6,11 @@ function App() {
     <Router>
       <div>App Placeholder</div>
       <Switch>
-        <Route path="/search" />
-        <Route path="/" />
+        <Route exact path="/">
+          Home
+        </Route>
+        <Route path="/search">Search</Route>
+        <Route>404 - Not Found</Route>
       </Switch>
     </Router>
   );
