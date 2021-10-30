@@ -7,8 +7,11 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/search" />
-        <Route path="/" />
+        <Route exact path="/">
+          Home
+        </Route>
+        <Route path="/search">Search</Route>
+        <Route>404 - Not Found</Route>
       </Switch>
     </Router>
   );
