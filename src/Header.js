@@ -13,7 +13,7 @@ const Header = () => (
       </div>
       <ul className={styles.nav}>
         <li>
-          <a href="javascript">Search</a>
+          <a href="/search/javascript">Search</a>
         </li>
         <li>
           <a href="#how-it-works">How it works</a>
