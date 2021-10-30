@@ -24,3 +24,7 @@
   color: #636363;
   margin: 0 0 0 26px;
 }
+
+.nav > li > a {
+  text-decoration: none;
+}

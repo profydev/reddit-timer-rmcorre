@@ -12,9 +12,15 @@ const Header = () => (
         </a>
       </div>
       <ul className={styles.nav}>
-        <li>Search</li>
-        <li>How it works</li>
-        <li>About</li>
+        <li>
+          <a href="javascript">Search</a>
+        </li>
+        <li>
+          <a href="#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
       </ul>
     </nav>
   </header>
