@@ -1,0 +1,30 @@
+.header {
+  padding: 0 80px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.brand a {
+  display: flex;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 3px 0 0 0;
+  padding: 0;
+}
+
+.nav > li {
+  display: inline;
+  color: #636363;
+  margin: 0 0 0 26px;
+}
+
+.nav > li > a {
+  text-decoration: none;
+}
