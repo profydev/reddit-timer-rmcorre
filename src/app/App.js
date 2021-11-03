@@ -1,17 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Header from '../common/header';
 
 function App() {
   return (
-    <Router>
+    <>
+      <Header />
       <Switch>
         <Route exact path="/">
-          Home
+          Home Page
         </Route>
-        <Route path="/search">Search</Route>
+        <Route path="/search">Search Page</Route>
         <Route>404 - Not Found</Route>
       </Switch>
-    </Router>
+    </>
   );
 }
 
