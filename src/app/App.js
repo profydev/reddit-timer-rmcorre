@@ -8,9 +8,9 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          Home
+          Home Page
         </Route>
-        <Route path="/search">Search</Route>
+        <Route path="/search">Search Page</Route>
         <Route>404 - Not Found</Route>
       </Switch>
     </>
