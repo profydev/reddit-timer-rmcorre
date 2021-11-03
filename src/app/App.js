@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from '../common/header';
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -13,7 +13,7 @@ function App() {
         <Route path="/search">Search</Route>
         <Route>404 - Not Found</Route>
       </Switch>
-    </Router>
+    </>
   );
 }
 
