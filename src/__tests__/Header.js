@@ -24,7 +24,7 @@ const setup = (initialPath = '/') => {
 test('navigates to home page when logo is clicked', () => {
   setup('/search/javascript');
 
-  const logoLink = screen.getByRole('link', { name: 'Reddit Timer logo' });
+  const logoLink = screen.getByRole('link', { name: /logo\.svg/i });
   userEvent.click(logoLink);
 
   expect(screen.getByText(/home page/i)).toBeInTheDocument();
