@@ -11,9 +11,6 @@ import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
 import '@fontsource/montserrat/700.css';
 
-import 'normalize.css';
-import './css/global.css';
-
 ReactDOM.render(
   <Router>
     <App />
