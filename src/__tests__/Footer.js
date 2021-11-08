@@ -21,6 +21,14 @@ const setup = (initialPath = '/') => {
   return { history };
 };
 
+// test('navigates to profy.dev/employers when "profy.dev" is clicked', () => {
+//   const { history } = setup();
+//   const link = screen.getByText('profy.dev');
+//   userEvent.click(link);
+
+//   expect(history.location.pathName).toEqual('/employers');
+// });
+
 test('navigates to home page when icon is clicked', () => {
   setup('/search/javascript');
   const iconLink = screen.getByRole('link', { name: /redditTimerIcon\.svg/ });
