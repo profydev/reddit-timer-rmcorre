@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle, theme } from '../style';
 import Header from '../common/header';
+import Footer from '../common/footer';
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
           Home Page
         </Route>
         <Route path="/search">Search Page</Route>
+        <Route path="/terms">Terms & Privacy Page</Route>
         <Route>404 - Not Found</Route>
       </Switch>
+      <Footer />
     </ThemeProvider>
   );
 }
