@@ -21,14 +21,6 @@ const setup = (initialPath = '/') => {
   return { history };
 };
 
-test('navigates to ooloo.io/employers when "profy.dev" is clicked', () => {
-  const { history } = setup();
-  const link = screen.getByText('profy.dev');
-  userEvent.click(link);
-
-  expect(history.location.pathName).toEqual('https://ooloo.io/employers/');
-});
-
 test('navigates to home page when icon is clicked', () => {
   setup('/search/javascript');
   const iconLink = screen.getByRole('link', { name: /redditTimerIcon\.svg/ });
