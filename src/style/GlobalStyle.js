@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${(props) => props.theme.fontSize.default};
     line-height: ${(props) => props.theme.lineHeight.default};
     color: ${(props) => props.theme.color.text};
+    max-width: 1440px;
+    margin: auto;
   }
 `;
 
