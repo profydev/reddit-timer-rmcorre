@@ -21,16 +21,17 @@ const setup = (initialPath = '/') => {
   return { history };
 };
 
-// test('navigates to profy.dev/employers when "profy.dev" is clicked', () => {
-//   const { history } = setup();
-//   const link = screen.getByText('profy.dev');
-//   userEvent.click(link);
+test('contains link to "profy.dev/employers"', () => {
+  setup();
 
-//   expect(history.location.pathName).toEqual('/employers');
-// });
+  const profyLink = screen.getByRole('link', { name: 'profy.dev' });
+
+  expect(profyLink.getAttribute('href')).toEqual('https://profy.dev/employers');
+});
 
 test('navigates to home page when icon is clicked', () => {
   setup('/search/javascript');
+
   const iconLink = screen.getByRole('link', { name: /redditTimerIcon\.svg/ });
   userEvent.click(iconLink);
 
@@ -39,6 +40,7 @@ test('navigates to home page when icon is clicked', () => {
 
 test('navigates to terms page when "Terms & Privacy" is clicked', () => {
   setup();
+
   const termsLink = screen.getByRole('link', { name: /Terms & Privacy/i });
   userEvent.click(termsLink);
 

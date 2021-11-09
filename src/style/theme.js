@@ -12,15 +12,10 @@ const theme = {
   },
   fontSize: {
     default: '1rem',
+    small: '.875rem',
   },
   lineHeight: {
     default: 1.69,
-  },
-  margin: {
-    default: 'auto',
-  },
-  width: {
-    default: '1440px',
   },
 };
 
