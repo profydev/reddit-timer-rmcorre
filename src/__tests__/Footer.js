@@ -1,24 +1,15 @@
 import React from 'react';
-import { MemoryRouter, Route } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app';
 
 const setup = (initialPath = '/') => {
-  let history;
   render(
     <MemoryRouter initialEntries={[initialPath]}>
       <App />
-      <Route
-        path="*"
-        render={(props) => {
-          history = props.history;
-          return null;
-        }}
-      />
     </MemoryRouter>
   );
-  return { history };
 };
 
 test('contains link to "profy.dev/employers"', () => {
