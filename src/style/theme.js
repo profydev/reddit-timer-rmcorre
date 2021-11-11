@@ -13,9 +13,11 @@ const theme = {
   fontSize: {
     default: '1rem',
     small: '.875rem',
+    title: '2.375rem',
   },
   lineHeight: {
     default: 1.69,
+    headline: 1.225,
   },
 };
 
