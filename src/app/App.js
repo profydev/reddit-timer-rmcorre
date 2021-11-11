@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle, theme } from '../style';
 import Header from '../common/header';
+import Hero from '../hero/Hero';
 import Footer from '../common/footer';
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
       <Normalize />
       <GlobalStyle />
       <Header />
+      <main>
+        <Hero />
+      </main>
       <Switch>
         <Route exact path="/">
           Home Page
