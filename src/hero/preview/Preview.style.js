@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 46px 0 0 0;
 `;
 
@@ -13,7 +16,6 @@ export const SubReddit = styled.p`
 `;
 
 export const Table = styled.img`
-  display: block;
   width: 1114px;
   height 332px;
   margin: 36px auto;
