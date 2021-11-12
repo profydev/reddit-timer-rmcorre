@@ -11,11 +11,13 @@ const theme = {
     headline: '"Bitter", serif',
   },
   fontSize: {
-    default: '1rem',
-    small: '.875rem',
+    default: '16px',
+    small: '14px',
+    title: '38px',
   },
   lineHeight: {
     default: 1.69,
+    headline: 1.225,
   },
 };
 

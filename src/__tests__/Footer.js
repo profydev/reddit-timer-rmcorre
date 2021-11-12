@@ -3,6 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app';
+import { defaultSubreddit } from '../constants';
 
 const setup = (initialPath = '/') => {
   render(
@@ -21,7 +22,7 @@ test('contains link to "profy.dev/employers"', () => {
 });
 
 test('navigates to home page when icon is clicked', () => {
-  setup('/search/javascript');
+  setup(`/search/${defaultSubreddit}`);
 
   const iconLink = screen.getByRole('link', { name: /redditTimerIcon\.svg/ });
   userEvent.click(iconLink);
