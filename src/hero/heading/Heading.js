@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from '../../common/title/Title';
 import * as S from './Heading.style';
+import { defaultSubreddit } from '../../constants';
 
 const Heading = () => (
   <S.Section>
@@ -8,7 +9,7 @@ const Heading = () => (
     <S.SubTitle>
       Great timing, great results! Find the best time to post on your subreddit.
     </S.SubTitle>
-    <S.Link to="/search/javascript">SHOW ME THE BEST TIME</S.Link>
+    <S.Link to={`/search/${defaultSubreddit}`}>SHOW ME THE BEST TIME</S.Link>
   </S.Section>
 );
 

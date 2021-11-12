@@ -3,6 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app/App';
+import { defaultSubreddit } from '../constants';
 
 const setup = (initialPath = '/') => {
   render(
@@ -43,27 +44,30 @@ test('button link is in the document', () => {
 test('subReddit is in the document', () => {
   setup();
 
-  const subReddit = screen.getByText(/r\/javascript/i);
+  const re = RegExp(`r/${defaultSubreddit}`, 'i');
+  const subReddit = screen.getByText(re);
 
   expect(subReddit).toBeInTheDocument();
 });
 
-test('button link has href to "/search/javascript"', () => {
+test(`button link has href to "/search/${defaultSubreddit}"`, () => {
   setup();
 
   const buttonLink = screen.getByRole('link', {
     name: /SHOW ME THE BEST TIME/i,
   });
 
-  expect(buttonLink.getAttribute('href')).toEqual('/search/javascript');
+  expect(buttonLink.getAttribute('href')).toEqual(
+    `/search/${defaultSubreddit}`
+  );
 });
 
-test('image link has href to "/search/javascript', () => {
+test(`image link has href to "/search/${defaultSubreddit}"`, () => {
   setup();
 
   const image = screen.getByRole('link', { name: /Heat Map/i });
 
-  expect(image.getAttribute('href')).toEqual('/search/javascript');
+  expect(image.getAttribute('href')).toEqual(`/search/${defaultSubreddit}`);
 });
 
 test('navigates to search page when button link is clicked', () => {
@@ -72,7 +76,6 @@ test('navigates to search page when button link is clicked', () => {
   const buttonLink = screen.getByRole('link', {
     name: /SHOW ME THE BEST TIME/i,
   });
-
   userEvent.click(buttonLink);
 
   expect(screen.getByText(/Search Page/i)).toBeInTheDocument();
@@ -82,7 +85,6 @@ test('navigates to search page when table link is clicked', () => {
   setup();
 
   const image = screen.getByRole('link', { name: /Heat Map/i });
-
   userEvent.click(image);
 
   expect(screen.getByText(/Search Page/i)).toBeInTheDocument();

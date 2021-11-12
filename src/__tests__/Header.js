@@ -3,6 +3,7 @@ import { MemoryRouter, Route } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app';
+import { defaultSubreddit } from '../constants';
 
 const setup = (initialPath = '/') => {
   let history;
@@ -22,7 +23,7 @@ const setup = (initialPath = '/') => {
 };
 
 test('navigates to home page when logo is clicked', () => {
-  setup('/search/javascript');
+  setup(`/search/${defaultSubreddit}`);
 
   const logoLink = screen.getByRole('link', { name: /logo\.svg/i });
   userEvent.click(logoLink);
@@ -37,7 +38,7 @@ test('navigates to search page when search link is clicked', () => {
   userEvent.click(searchLink);
 
   expect(screen.getByText(/search page/i)).toBeInTheDocument();
-  expect(history.location.pathname).toEqual('/search/javascript');
+  expect(history.location.pathname).toEqual(`/search/${defaultSubreddit}`);
 });
 
 test.each`
@@ -47,7 +48,7 @@ test.each`
 `(
   'navigates to "$link" section when "$link" link is clicked',
   ({ link, hash }) => {
-    const { history } = setup('/search/javascript');
+    const { history } = setup(`/search/${defaultSubreddit}`);
 
     const hashLink = screen.getByRole('link', { name: link });
     userEvent.click(hashLink);
