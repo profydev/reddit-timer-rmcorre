@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { Link as UnstyledLink } from 'react-router-dom';
 
 export const Section = styled.section`
-  margin: 1.3rem 0 0 0;
+  margin: 20.8px 0 0 0;
 `;
 
 export const SubTitle = styled.p`
   width: 100%;
-  margin: 1.25rem 0 0 0;
+  margin: 20px 0 0 0;
   text-align: center;
 `;
 
