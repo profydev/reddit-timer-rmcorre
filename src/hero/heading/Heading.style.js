@@ -2,17 +2,18 @@ import styled from 'styled-components';
 import { Link as UnstyledLink } from 'react-router-dom';
 
 export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 20.8px 0 0 0;
 `;
 
 export const SubTitle = styled.p`
-  width: 100%;
   margin: 20px 0 0 0;
   text-align: center;
 `;
 
 export const Link = styled(UnstyledLink)`
-  display: block;
   background-color: #fdb755;
   border: none;
   border-radius: 4px;
