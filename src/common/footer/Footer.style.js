@@ -4,12 +4,11 @@ import { ReactComponent as UnstyledIcon } from './redditTimerIcon.svg';
 
 export const Container = styled.footer`
   display: flex;
-  width: 100%;
-  max-width: 980px;
-  height: 100px;
-  margin: auto;
-  padding: 0 20px;
   align-items: center;
+  height: 100px;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
 `;
 
 const linkStyles = css`
@@ -26,7 +25,7 @@ export const Anchor = styled.a`
 
 export const Icon = styled(UnstyledIcon)`
   display: block;
-  margin: auto;
+  margin: 0 auto;
 `;
 
 export const Link = styled(UnstyledLink)`

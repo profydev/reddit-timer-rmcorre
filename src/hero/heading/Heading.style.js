@@ -14,10 +14,10 @@ export const SubTitle = styled.p`
 `;
 
 export const Link = styled(UnstyledLink)`
+  color: ${(props) => props.theme.color.white};
   background-color: #fdb755;
   border: none;
   border-radius: 4px;
-  color: ${(props) => props.theme.color.white};
   font-size: ${(props) => props.theme.fontSize.small};
   font-weight: 500;
   height: 36px;

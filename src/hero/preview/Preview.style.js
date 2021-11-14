@@ -16,7 +16,7 @@ export const SubReddit = styled.p`
 `;
 
 export const Table = styled.img`
-  width: 1114px;
   height 332px;
   margin: 36px auto;
+  width: 1114px;
 `;
