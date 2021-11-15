@@ -9,11 +9,6 @@ export const Container = styled.section`
 `;
 
 export const Heading = styled.h2`
-  color: ${(props) => props.theme.color.black};
-  font-family: ${(props) => props.theme.fontFamily.headline};
-  font-size: ${(props) => props.theme.fontSize.h2};
-  font-weight: 400;
-  line-height: ${(props) => props.theme.lineHeight.h2};
   padding: 0 0 0 1px;
   text-align: left;
 `;
