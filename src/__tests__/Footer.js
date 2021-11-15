@@ -16,9 +16,11 @@ const setup = (initialPath = '/') => {
 test('contains link to "profy.dev/employers"', () => {
   setup();
 
-  const profyLink = screen.getByRole('link', { name: 'profy.dev' });
+  const profyLink = screen.getAllByRole('link', { name: 'profy.dev' });
 
-  expect(profyLink.getAttribute('href')).toEqual('https://profy.dev/employers');
+  expect(profyLink[1].getAttribute('href')).toEqual(
+    'https://profy.dev/employers'
+  );
 });
 
 test('navigates to home page when icon is clicked', () => {
