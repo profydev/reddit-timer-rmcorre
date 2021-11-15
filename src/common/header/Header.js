@@ -11,8 +11,8 @@ const Header = () => (
 
     <nav>
       <S.Link to={`/search/${defaultSubreddit}`}>Search</S.Link>
-      <S.Link to="/#how-it-works">How it works</S.Link>
-      <S.Link to="/#about">About</S.Link>
+      <S.HashLink to="/#how-it-works">How it works</S.HashLink>
+      <S.HashLink to="/#about">About</S.HashLink>
     </nav>
   </S.Container>
 );
