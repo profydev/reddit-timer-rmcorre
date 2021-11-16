@@ -24,6 +24,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${(props) => props.theme.fontSize.h1};
     line-height: ${(props) => props.theme.lineHeight.h1};
   }
+
+  h2 {
+    font-size: ${(props) => props.theme.fontSize.h2};
+    line-height: ${(props) => props.theme.lineHeight.h2};
+  }
 `;
 
 export default GlobalStyle;

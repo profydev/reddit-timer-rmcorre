@@ -1,6 +1,6 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app';
 import { defaultSubreddit } from '../constants';
@@ -11,29 +11,36 @@ const setup = (initialPath = '/') => {
       <App />
     </MemoryRouter>
   );
+
+  const footer = screen.getByRole('contentinfo');
+  return { footer };
 };
 
 test('contains link to "profy.dev/employers"', () => {
-  setup();
+  const { footer } = setup();
 
-  const profyLink = screen.getByRole('link', { name: 'profy.dev' });
+  const profyLink = within(footer).getByRole('link', { name: 'profy.dev' });
 
   expect(profyLink.getAttribute('href')).toEqual('https://profy.dev/employers');
 });
 
 test('navigates to home page when icon is clicked', () => {
-  setup(`/search/${defaultSubreddit}`);
+  const { footer } = setup(`/search/${defaultSubreddit}`);
 
-  const iconLink = screen.getByRole('link', { name: /redditTimerIcon\.svg/ });
+  const iconLink = within(footer).getByRole('link', {
+    name: /redditTimerIcon\.svg/,
+  });
   userEvent.click(iconLink);
 
   expect(screen.getByText(/home page/i)).toBeInTheDocument();
 });
 
 test('navigates to terms page when "Terms & Privacy" is clicked', () => {
-  setup();
+  const { footer } = setup();
 
-  const termsLink = screen.getByRole('link', { name: /Terms & Privacy/i });
+  const termsLink = within(footer).getByRole('link', {
+    name: /Terms & Privacy/i,
+  });
   userEvent.click(termsLink);
 
   expect(screen.getByText(/Terms & Privacy Page/i)).toBeInTheDocument();
