@@ -9,11 +9,11 @@ const Header = () => (
       <S.Logo />
     </Link>
 
-    <nav>
+    <S.Nav>
       <S.Link to={`/search/${defaultSubreddit}`}>Search</S.Link>
       <S.HashLink to="/#how-it-works">How it works</S.HashLink>
       <S.HashLink to="/#about">About</S.HashLink>
-    </nav>
+    </S.Nav>
   </S.Container>
 );
 
