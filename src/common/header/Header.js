@@ -4,7 +4,7 @@ import * as S from './Header.style';
 import { defaultSubreddit } from '../../constants';
 
 const Header = () => (
-  <S.Container>
+  <S.Wrapper>
     <Link to="/">
       <S.Logo />
     </Link>
@@ -14,7 +14,7 @@ const Header = () => (
       <S.HashLink to="/#how-it-works">How it works</S.HashLink>
       <S.HashLink to="/#about">About</S.HashLink>
     </S.Nav>
-  </S.Container>
+  </S.Wrapper>
 );
 
 export default Header;

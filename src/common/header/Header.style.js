@@ -10,12 +10,12 @@ const linkStyles = css`
   text-decoration: none;
 `;
 
-export const Container = styled.header`
+export const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  margin: 0 auto;
+  margin: 0 auto 20.8px;
   max-width: 1280px;
 
   @media ${breakpoint.device.sm} {
