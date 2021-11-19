@@ -14,7 +14,7 @@ const theme = {
     // Use rem
     // To convert from px to rem -> fontsize in px / 16px (browser default)
     default: '1rem',
-    small: '.875rem',
+    small: '0.875rem',
     h1: '2.375rem',
     h2: '1.5rem',
   },
@@ -23,7 +23,7 @@ const theme = {
     // To convert from px to number -> lineheight in px / element font-size in px
     default: 1.69,
     h1: 1.2,
-    h2: 1.2,
+    h2: 1.2083,
   },
 };
 

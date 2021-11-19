@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   body {
@@ -10,7 +12,9 @@ const GlobalStyle = createGlobalStyle`
     font-family:  ${(props) => props.theme.fontFamily.default};
     font-size: ${(props) => props.theme.fontSize.default};
     line-height: ${(props) => props.theme.lineHeight.default};
+    margin: auto;
     max-width: 1440px;
+    padding: 0 20px;
   }
 
   h1, h2, h3, h4, h5, h6 {
