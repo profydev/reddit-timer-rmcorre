@@ -4,20 +4,23 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 129px auto 106px;
   max-width: 738px;
+  margin: 0 auto;
 `;
 
-export const Article = styled.article``;
+export const Article = styled.article`
+  &:first-child {
+    margin: 0 0 109px 0;
+  }
+`;
 
 export const Heading = styled.h2`
-  padding: 0 0 0 1px;
   text-align: left;
 `;
 
 export const UL = styled.ul`
   line-height: 1.6875;
-  margin: 8.9px 0 109px 13px;
+  margin: 8.9px 0 0 13px;
   padding: 0;
 `;
 
@@ -34,7 +37,6 @@ export const Span = styled.span`
 
 export const P = styled.p`
   margin: 10px 0 0 0;
-  padding: 0 0 0 2px;
 `;
 
 export const A = styled.a`

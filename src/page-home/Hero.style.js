@@ -5,12 +5,12 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20.8px 0 0 0;
   text-align: center;
+  margin: 0 0 129px 0;
 `;
 
 export const SubTitle = styled.p`
-  margin: 20px 0 0 0;
+  margin: 0 0 45px 0;
   text-align: center;
 `;
 
@@ -23,7 +23,7 @@ export const Button = styled(UnstyledLink)`
   font-weight: 500;
   height: 36px;
   line-height: 36px;
-  margin: 45px auto 0;
+  margin: 0 auto 44px;
   text-align: center;
   text-decoration: none;
   width: 217px;
@@ -32,18 +32,18 @@ export const Button = styled(UnstyledLink)`
 export const SubReddit = styled.p`
   font-weight: 500;
   line-height: 19.5px;
-  margin: 0;
+  margin: 0 0 36px 0;
   padding: 0 2px 1px 0;
   text-align: center;
 `;
 
 export const Link = styled(UnstyledLink)`
-  margin: 36px 0 0 0;
   text-decoration: none;
 `;
 
 // display: block removes the space on the bottom of the image
 export const Table = styled.img`
+  display: block;
   height auto;
   max-width: 1114px;
   width: 100%;
