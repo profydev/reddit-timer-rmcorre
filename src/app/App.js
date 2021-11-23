@@ -6,7 +6,6 @@ import { GlobalStyle, theme } from '../style';
 import Header from '../common/header';
 import Footer from '../common/footer';
 import HomePage from '../page-home';
-import SearchPage from '../page-search';
 
 function App() {
   return (
