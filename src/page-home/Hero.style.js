@@ -9,6 +9,11 @@ export const Section = styled.section`
   margin: 0 0 129px 0;
 `;
 
+export const Title = styled.h1`
+  margin: 0 0 20px 0;
+  padding: 1px 3.5px 0 0;
+`;
+
 export const SubTitle = styled.p`
   margin: 0 0 45px 0;
   text-align: center;
@@ -16,7 +21,7 @@ export const SubTitle = styled.p`
 
 export const Button = styled(UnstyledLink)`
   color: ${(props) => props.theme.color.white};
-  background-color: #fdb755;
+  background-color: ${(props) => props.theme.color.primary};
   border: none;
   border-radius: 4px;
   font-size: ${(props) => props.theme.fontSize.small};
