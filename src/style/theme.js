@@ -4,7 +4,9 @@ const theme = {
     black: '#000000',
     white: '#ffffff',
     gray300: '#d5d5d5',
+    gray500: '#9E9E9E',
     gray700: '#636363',
+    primary: '#fdb755',
   },
   fontFamily: {
     default: '"Montserrat", sans-serif',
@@ -15,6 +17,7 @@ const theme = {
     // To convert from px to rem -> fontsize in px / 16px (browser default)
     default: '1rem',
     small: '0.875rem',
+    med: '1.125rem',
     h1: '2.375rem',
     h2: '1.5rem',
   },

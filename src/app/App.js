@@ -6,6 +6,7 @@ import { GlobalStyle, theme } from '../style';
 import Header from '../common/header';
 import Footer from '../common/footer';
 import HomePage from '../page-home';
+import SearchPage from '../page-search';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route path="/search/javascript">Search Page</Route>
+        <Route path="/search/:subreddit">
+          <SearchPage />
+        </Route>
         <Route path="/terms">Terms & Privacy Page</Route>
         <Route>404 - Not Found</Route>
       </Switch>
