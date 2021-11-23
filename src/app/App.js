@@ -13,16 +13,15 @@ function App() {
       <Normalize />
       <GlobalStyle />
       <Header />
-      <HomePage />
-      <Footer />
       <Switch>
         <Route exact path="/">
-          Home Page
+          <HomePage />
         </Route>
-        <Route path="/search">Search Page</Route>
+        <Route path="/search/javascript">Search Page</Route>
         <Route path="/terms">Terms & Privacy Page</Route>
         <Route>404 - Not Found</Route>
       </Switch>
+      <Footer />
     </ThemeProvider>
   );
 }

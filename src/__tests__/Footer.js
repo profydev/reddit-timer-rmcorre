@@ -32,7 +32,9 @@ test('navigates to home page when icon is clicked', () => {
   });
   userEvent.click(iconLink);
 
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(/No reactions to your reddit posts/i)
+  ).toBeInTheDocument();
 });
 
 test('navigates to terms page when "Terms & Privacy" is clicked', () => {

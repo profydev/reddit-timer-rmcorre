@@ -16,7 +16,7 @@ const setup = (initialPath = '/') => {
 test('title is in the document', () => {
   setup();
 
-  const title = screen.getByText(/No reactions to your reddit posts\?/i);
+  const title = screen.getByText(/No reactions to your reddit posts/i);
 
   expect(title).toBeInTheDocument();
 });
