@@ -1,12 +1,11 @@
 import React from 'react';
 import * as S from './Hero.style';
-import Title from '../common/title/Title';
 import { defaultSubreddit } from '../constants';
 import table from './table.png';
 
 const Hero = () => (
   <S.Section>
-    <Title>No reactions to your reddit posts?</Title>
+    <S.Title>No reactions to your reddit posts?</S.Title>
     <S.SubTitle>
       Great timing, great results! Find the best time to post on your subreddit.
     </S.SubTitle>
