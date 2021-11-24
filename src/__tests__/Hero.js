@@ -78,7 +78,9 @@ test('navigates to search page when button link is clicked', () => {
   });
   userEvent.click(buttonLink);
 
-  expect(screen.getByText(/Search Page/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(/Find the best time for a subreddit/i)
+  ).toBeInTheDocument();
 });
 
 test('navigates to search page when table link is clicked', () => {
@@ -87,5 +89,7 @@ test('navigates to search page when table link is clicked', () => {
   const image = screen.getByRole('link', { name: /Heat Map/i });
   userEvent.click(image);
 
-  expect(screen.getByText(/Search Page/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(/Find the best time for a subreddit/i)
+  ).toBeInTheDocument();
 });
