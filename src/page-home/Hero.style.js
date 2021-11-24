@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as UnstyledLink } from 'react-router-dom';
+import UnstyledButton from '../common/button';
 
 export const Section = styled.section`
   display: flex;
@@ -19,18 +20,8 @@ export const SubTitle = styled.p`
   text-align: center;
 `;
 
-export const Button = styled(UnstyledLink)`
-  color: ${(props) => props.theme.color.white};
-  background-color: ${(props) => props.theme.color.primary};
-  border: none;
-  border-radius: 4px;
-  font-size: ${(props) => props.theme.fontSize.small};
-  font-weight: 500;
-  height: 36px;
-  line-height: 36px;
+export const Button = styled(UnstyledButton)`
   margin: 0 auto 44px;
-  text-align: center;
-  text-decoration: none;
   width: 217px;
 `;
 
