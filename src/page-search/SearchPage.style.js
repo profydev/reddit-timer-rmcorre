@@ -6,8 +6,3 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
 `;
-
-export const Title = styled.h1`
-  margin: 0 0 35px 0;
-  padding: 1px 3.5px 0 0;
-`;
