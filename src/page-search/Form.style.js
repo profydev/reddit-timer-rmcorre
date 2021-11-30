@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import UnstyledButton from '../common/button';
 
+export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 60px auto;
+`;
+
+export const Heading = styled.h1`
+  margin: 0 auto 36px auto;
+  padding: 0 5px 0 0;
+`;
+
 export const Form = styled.form`
   display: flex;
   margin: 0 auto;
